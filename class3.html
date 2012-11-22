@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Class 3 ~ Javascript ~ Girl Develop IT</title>
+
+		<meta name="description" content="This is the official Girl Develop It Core Intro Javascript course. Material based on original material by Sara Chipps, Pamela Fox, Alexis Goldstein, Izzy Johnston and Leo Newball.
+
+    The course is meant to be taught in 4 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
+		<meta name="author" content="Girl Develop It">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="reveal/css/reveal.css">
+		<link rel="stylesheet" href="reveal/css/theme/gdidefault.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
+		<!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/dark.css">
+
+		<!-- If use the PDF print sheet so students can print slides-->
+		
+		<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+			  <!-- Opening slide -->
+        <section>
+          <img src = "images/gdi_logo_badge.png">
+          <h3>Beginning Javascript</h3>
+          <h4>Class 2</h4>
+        </section>
+        
+        <!-- Welcome-->
+        <section>
+          <h3>Welcome!</h3>
+          <div class = "left-align">
+          <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+          <p class ="green">Some "rules"</p>
+          <ul>
+            <li>We are here for you!</li>
+            <li>Every question is important</li>
+            <li>Help each other</li>
+            <li>Have fun</li>
+          </ul>
+          </div>
+        </section>
+        
+        <!-- What is a library-->
+        <section>
+          <h3>What is a library?</h3>
+          <ul>
+            <li class = "fragment">Software libraries hold functions (not books!)</li>
+            <li class = "fragment">When you include a library, you can use all the functions in that library</li>
+            <li class = "fragment">That means: <span class = "pink">you get to take advantage of other people's experience!</li>
+            <li class = "fragment">And... <span class ="blue">Save time!</span></li>
+          </ul>
+        </section>
+        
+        <!-- What is jQuery-->
+        <section>
+          <h3>What is jQuery?</h3>
+          <p class = "fragment">jQuery is a <span class = "green">library</span> of JavaScript functions.</p>
+          <p class = "fragment">It contains many functions to help simplify your programming, including:</p>
+          <ul>
+            <li class = "fragment">HTML element selection &amp; manipulation</li>
+            <li class = "fragment">CSS manipulation</li>
+            <li class = "fragment">HTML events</li>
+            <li class = "fragment">JavaScript effects and animations</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h3>Why use jQuery?</h3>
+          <ul>
+            <li class = "fragment">The most popular JavaScript library</li>
+            <li class = "fragment">jQuery empowers you to "write less, do more."</li>
+            <li class = "fragment">Great <a href = "http://docs.jquery.com/" target = "_blank">documentation and tutorials</a></li>
+            <li class = "fragment">Used by nearly 20 million(!) websites</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h3>jQuery: A Brief History</h3>
+          <ul>
+            <li class = "fragment">jQuery was created by John Resig, a JavaScript tool developer at Mozilla.</li>
+            <li class = "fragment">January 2006: John announced jQuery at BarCampNYC: BarCampNYC Wrap-up</li>
+            <li class = "fragment">September 2007: A new user interface library is added to jQuery: jQuery UI: Interactions and Widgets</li>
+            <li class = "fragment">September 2008: Microsoft and Nokia announce their support for jQuery</li>
+            <li class = "fragment">December 2009: jQuery wins .Net Magazine's Award for Best Open Source Application</li>
+          </ul>
+        </section>
+        
+        <!-- Including jquery-->
+        <section>
+          <h3>Including jQuery</h3>
+          Two ways to include jQuery on your page:
+          <div class = "fragment">
+            Download the library, store it locally:
+          <pre><code contenteditable class = "html">
+  &lt;head>
+    &lt;script type="text/javascript" src="jquery.js">&lt;/script>
+  &lt;/head>
+          </code></pre>
+          </div>
+          <div class = "fragment">
+          Include the the live library:
+          <pre><code contenteditable class = "html">
+  &lt;head>
+    &lt;script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js">
+    &lt;/script>
+  &lt;/head>
+          </code></pre>
+          </div>
+          <div class = "fragment">
+            Note: live code can change! It's always best to download
+          </div>
+        </section>
+        
+        <!-- Selectors-->
+        <section>
+          <h3>jQuery Selectors</h3>
+          <p>Remember <span class = "green">document.getElementById()</span> and <span class = "green">documet.getElementsByTagName()</span>? </p>
+          <p class = "fragment"> jQuery selectors let you get elements by: </p>
+          <ul>
+            <li class = "fragment">Element name (div, p)
+            <pre><code contenteditable class = "javascript">
+      var divs = $("div"); // All divs on page
+            </code></pre>
+            </li>
+            <li class = "fragment">ID name (#mainpicture, #results)
+            <pre><code contenteditable class = "javascript">
+var img = $("#mainpicture"); //img with id mainpicture
+            </code></pre>
+            </li>
+            <li class = "fragment">Class name (.result, .picture)
+            <pre><code contenteditable class = "javascript">
+var images = $(".picture"); //All images with class picture 
+            </code></pre> 
+            </li>
+          </ul>
+        </section>
+      
+        
+        <!-- Actions-->
+        <section>
+          <h3>jQuery Actions</h3>
+          <div class = "left-align">
+            <p class = "fragment">jQuery has hundreds of actions that can be performed on any element</p>
+            <p class = "fragment">All the actions are methods</p>
+            <p class = "fragment">As methods they are called with dot notation</p>
+          </div>
+          <div class = "fragment">
+            Action format
+            <pre><code contenteditable class = "javascript">
+        $(selector).action();     
+            </code></pre>
+          </div>
+        </section>
+        
+        <!-- Attributes and css-->
+        <section>
+          <h3>Updating attributes and css</h3>
+          <div class = "fragment">
+            <pre><code contenteditable class = "html">
+  &lt;img id="mainpicture" src="http://girldevelopit.com/assets/pink-logo.png">         
+            </code></pre>
+          </div>
+          <div class = "fragment">
+            Attribute get and set
+            <pre><code contenteditable class = "javascript">
+  var img = $('#mainpicture');
+  img.attr('src');
+  img.attr('src', 'http://girldevelopit.com/assets/pink-logo.png');
+            </code></pre>
+          </div>
+          <div class = "fragment">
+            CSS property get and set
+            <pre><code contenteditable class = "javascript">
+  var img = $('#mainpicture');
+  img.css('width');
+  img.css('width', '200px');
+            </code></pre>
+          </div>
+        </section>
+        
+        <!-- html values-->
+        <section>
+          <h3>Updating values and html</h3>
+          <div class = "fragment">
+            <pre><code contenteditable class = "html">
+  &lt;div class = "results">Boo!&lt;/div>         
+            </code></pre>
+          </div>
+          <div class = "fragment">
+            Get and set html value
+            <pre><code contenteditable class = "javascript">
+  var div = $('#results');
+  div.html();
+  div.html('New html!');
+            </code></pre>
+          </div>
+        </section>
+        
+        <!-- Append and prepend-->
+        <section>
+          <h3>Append and Prepend</h3>
+          <div class = "fragment">
+            <pre><code contenteditable class = "html">
+  &lt;div class = "results">Boo!&lt;/div>         
+            </code></pre>
+          </div>
+          <div class = "fragment">
+            Append html
+            <pre><code contenteditable class = "javascript">
+    var div = $('#results');
+    div.append('Additional html');
+            </code></pre>
+          </div>
+          <div class = "fragment">
+            Prepend html
+            <pre><code contenteditable class = "javascript">
+    var div = $('#results');
+    div.prepend('Additional html (on top)');
+            </code></pre>
+          </div>
+        </section>
+        
+        <section>
+          <h3>Creating new element</h3>
+          <div class = "fragment">
+            <pre><code contenteditable class = "javascript">
+    var newDiv = $('&lt;div>&lt;/div>');
+            </code></pre>
+          </div>
+          <div class = "fragment">
+            Seriously. That's it!
+          </div>
+        </section>
+        
+        <section>
+          <h3>Let's Develop It!</h3>
+          <p>Try to convert last week's DOM interaction into jQuery.</p>
+          <p>Don't forget to include jQuery in your html head!</p>
+        </section>
+        <!-- -->
+        <section>
+          <h2>Questions?</h2>
+          <div style = "font-size:1200%; height:100%; margin-top:40%" class ="blue">?
+            <div class ="clear"></div></div>
+        </section>
+			</div>
+  		<footer>
+        <div class="copyright">
+          Javascript ~ Girl Develop It ~
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+        </div>
+      </footer>
+		</div>
+
+
+		<script src="reveal/lib/js/head.min.js"></script>
+		<script src="reveal/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
