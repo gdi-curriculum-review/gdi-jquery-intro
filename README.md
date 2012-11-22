@@ -1,4 +1,4 @@
-# CORE  HTML/CSS
+# CORE  JAVASCRIPT/JQUERY
 
 This is the official Girl Develop It Core Intro Javascript course. Material based on original material by Sara Chipps, Pamela Fox, Alexis Goldstein, Izzy Johnston and Leo Newball.
 
