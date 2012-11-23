@@ -24,7 +24,7 @@ Introduce jQuery. Discuss its role as a javascript library (not a different lang
 
 ### Class 4
 
-Introduce jQuery UI plugins and a lightbox plugin. Students will build a portfolio of images with a slideshow and jqueryUI elements.
+Introduce APIs, REST, and AJAX. Students will interact with the Meetup API (chosen because all students are already aware of Meetup and calls can be made without oAuth authentication). Bonus intros to jQuery UI, and the concept of jQuery plugins
 
 
 ## Theme customization
