@@ -250,10 +250,121 @@ var images = $(".picture"); //All images with class picture
           </div>
         </section>
         
+        <!-- Exercise-->
         <section>
           <h3>Let's Develop It!</h3>
           <p>Try to convert last week's DOM interaction into jQuery.</p>
           <p>Don't forget to include jQuery in your html head!</p>
+        </section>
+        
+        <!-- Document Ready-->
+        <section>
+          <h3>Document Ready</h3>
+          <div class = "left-align">
+          <p>Webpages take time to load</p>
+          <p class = "fragment">Almost always, you don't want the JavaScript to be called until the page is loaded</p>
+          </div>
+          <div class = "fragment">
+            Document ready is a method called when the page is loaded
+            <pre><code contenteditable class = "javascript">
+        $(document).ready(function(){
+          
+        });
+            </code></pre>
+          </div>
+          <div class = "fragment left-align">
+            <span class = "yellow">Note:</span> The function() inside is an "anonymous function". It has no name, but still performs like a function.
+          </div>
+        </section>
+        
+        <!-- HTML Events-->
+        <section>
+          <h3>HTML events</h3>
+          <p>Events occur on a webpage via user interaction</p>
+          <p class = "fragment">Common Events:</p>
+          <ul>
+            <li class = "fragment">mouseenter -- mouse goes inside an element</li>
+            <li class = "fragment">mouseleave -- mouse leaves an element</li>
+            <li class = "fragment">click -- mouse clicks an element</li>
+            <li class = "fragment"><a href = "http://api.jquery.com/category/events/" target = "_blank">Other events</a></li>
+          </ul>
+        </section>
+        
+        <section>
+          <h3>Handling events</h3>
+      <pre><code contenteditable class = "javascript">
+  $(selector).mouseenter(function(){
+    //code when the mouse enters
+  })
+      </code></pre>
+          <div class = "fragment">
+      <pre><code contenteditable class = "javascript">
+  $('.box').mouseenter(function(){
+    $(this).css('background-color', 'purple')
+  })
+      </code></pre>
+          </div>
+          <div class = "fragment left-align">
+            <div>The <span class = "green">$(this)</span> selector in jQuery refers to the element on whom the action was called.</div>
+            <div>Here <span class = "green">$(this)</span> is the <span class = "blue">$('.box')</span> that the mouse entered.
+          </div>
+        </section>
+        
+        <section>
+          <h3>Handling event examples</h3>
+          <div class = "fragment">
+            <pre><code contenteditable class = "javascript">
+      $('.box').mouseenter(function(){
+        $(this).css('background-color', 'purple')
+      })
+            </code></pre>
+          </div>
+          <div class = "fragment">
+          <pre><code contenteditable class = "javascript">
+      $('.box').mouseleave(function(){
+        $(this).css('background-color', 'orange')
+      })
+          </code></pre>
+          </div>
+          <div class = "fragment">
+          <pre><code contenteditable class = "javascript">
+      $('.box').click(function(){
+        $(this).css('background-color', 'green')
+      })
+          </code></pre>
+          </div>
+        </section>
+        
+        <section>
+          <h3>Combining events</h3>
+          <p>If you want multiple events to happen on the same element, you should use the bind method</p>
+          <div class = "fragment">
+          <pre><code contenteditable class = "javascript">
+      $('.box').bind({
+        click: function() {
+          $(this).css('background-color', 'green')
+        },
+        mouseenter: function() {
+          $(this).css('background-color', 'purple')
+        },
+        mouseleave: function(){
+          $(this).css('background-color', 'orange')
+        }
+      });
+          </code></pre>
+          </div>
+        </section>
+        
+        <!-- Exercise-->
+        <section>
+          <h3>Let's Develop It</h3>
+          <ul>
+            <li>Add a div to your html that is 100px by 200px</li>
+            <li>Bind events to the div in your javascript file</li>
+            <li>Don't forget to surround your events with document ready</li>
+            <li>Try to change size, color, or event the html inside the div</li>
+            <li>Bonus: change all the onclick events to jQuery click events</li>
+          </ul>
         </section>
         <!-- -->
         <section>
