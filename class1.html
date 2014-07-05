@@ -238,6 +238,29 @@
             </ol>
         </section>
 
+        <section>
+            <h3>Commenting</h3>
+            <div>
+            Comments are statements that only you, not the browser reads. Comments are to:
+            <ul>
+                <li>Explain code to your future self and others</li>
+                <li>List TODOs, requirements or other things you need to remember</li>
+            </ul>
+            <pre><code contenteditable class="javascript">
+                // set max value here so we have a value
+                var maxVal = 5000;
+
+                /*
+                    This function takes a value returns the difference
+                    between it and the max value.
+                 */
+                function maxDiff(val) {
+                    return maxVal - val;
+                }
+            </code></pre>
+            </div>
+        </section>
+
         <!-- Data Types-->
         <section>
           <h3>Data types</h3>
@@ -418,15 +441,6 @@ var sentence = "My dinosaur is a " + dinosaur + ". It's name is " + name + ".";
           }
 </code></pre>
         </div>
-        <div class="fragment">
-        Note: you can write comments that only you, not the browser reads
-        <pre><code contenteditable class="javascript">
-            // comment on one line
-            /* comment on
-              multiple lines
-              */
-        </code></pre>
-        </div>
         </section>
 
         <!-- Comparison-->
@@ -440,7 +454,7 @@ var sentence = "My dinosaur is a " + dinosaur + ". It's name is " + name + ".";
             <tr class="fragment"><td> < </td><td> Less than </td></tr>
             <tr class="fragment"><td> <= </td><td> Less than or equal to </td></tr>
           </table>
-          <p class="fragment green"> Don't confuse = (assign a value) <br/>with === (compare a value)</p>
+          <p class="fragment green"> Remember = (assign a value) <br/>with === (compare a value)</p>
         </section>
 
         <!-- Logic-->
