@@ -146,7 +146,6 @@
 
         </section>
         <section>
-
             <h3>JavaScript to the rescue!</h3>
             <div class="left-align">
             <p>That's when we use JavaScript</p>
@@ -155,13 +154,10 @@
             <ul>
                 <li>Clicking on a button that hides and show a menu</li>
                 <li><a href = "http://fancyapps.com/fancybox/#examples" target = '_blank'>Image Galleries and Lightboxes</a></li>
-                <li><a href = "https://www.google.com/doodles/30th-anniversary-of-pac-man" target = '_blank'>Games and all sorts of Google Doodles</a></li>
-                <li><a href = "http://www.girldevelopit.com/materials" target = '_blank'>Interactions, like show/hide and accordians</a></li>
+                <li><a href = "https://www.google.com/doodles/30th-anniversary-of-pac-man" target = '_blank'>Games</a></li>
                 <li><a href = "http://www.girldevelopit.com/classes" target = '_blank'>Retrieving data from other websites (through APIs)</a></li>
-                <li>All sorts of awesomeness, including this slideshow!</li>
-
+                <li>This slideshow!</li>
             </ul>
-
         </section>
 
         <!--&lt;!&ndash; Nitty gritty 1 - Clients and servers &ndash;&gt;-->
@@ -208,6 +204,8 @@
               alert("hi")
           </code></pre>
         </section>
+
+
 
         <!-- Variables-->
         <section>
@@ -292,6 +290,9 @@
                 In nerd speak, JavaScript variables are "loosely typed." You don't know the kind of value a variable will have until you assign it.
             </div>
         </section>
+
+
+
 
         <!-- Naming rules-->
         <!--<section>-->
@@ -389,22 +390,23 @@
 
         <section>
             <h3>Let's Develop It</h3>
-            <p>Lifetime supply calculator</p>
-            <p>Ever wonder how much a lifetime supply of your favorite snack or drink is?</p>
+            <p>Daily Budget</p>
+            <p>Ever wonder how much do you have to spend per day?</p>
             <ul>
-                <li>Store your age in a variable</li>
-                <li>Store your maximum age in a variable</li>
-                <li>Store an estimated amount per day in a variable</li>
-                <li>Calculate how many you would eat/drink for the rest of your life.</li>
-                <li>Output the result in an alert(see below) like so: "You will need NN to last you until your old age of NN"</li>
+                <li>Store your monthly income in a variable, call it month_income</li>
+
+                <li>Store the number of days in a month, let's call it days</li>
+
+                <li>Calculate how much you have to spend per day</li>
+
+                <li>Output the result in an alert(see below) like so: "You have X number of dollars per day to spend"</li>
             </ul>
-          
 <pre><code contenteditable class ="javascript">
     alert(answer);
-
 </code></pre>
 
         </section>
+
 
         <!-- If statement-->
         <section>
@@ -419,9 +421,9 @@
             </div>
             <div class = "fragment">
 <pre><code contenteditable class ="javascript">
-    var bananas = 1;
-    if (bananas < 2){
-    console.log("You should buy more bananas!")
+    var budget = 8;
+    if (bananas < 10){
+    console.log("You should borrow some money")
     }
 </code></pre>
             </div>
@@ -452,24 +454,24 @@
 
         <!-- Logic-->
         <section>
-            <h3>Logic</h3>
+            <h3>Combining multiple conditions</h3>
             <table>
                 <tr class = "fragment"><td> && </td><td> AND </td></tr>
                 <tr class = "fragment"><td> || </td><td> OR </td></tr>
                 <tr class = "fragment"><td> ! </td><td> NOT </td></tr>
             </table>
+
+            <p class="fragment">Convert to words if you get confused with the symbols</p>
+
             <div class = "fragment">
             <pre><code contenteditable class ="javascript">
-                var bananas = 5;
-                var oranges = 2;
-                if (bananas > 3 && oranges > 3){
+                var day_budget = 5;
+                var income = 10;
+                if (income > 5 && day_budget > 3 ){
                 console.log('Eat fruit!');
                 }
                 if (bananas < 2 || oranges < 2){
                 console.log('Buy fruit!');
-                }
-                if (!(bananas >= 0)){
-                console.log('How do you have negative bananas?');
                 }
             </code></pre>
             </div>
