@@ -212,16 +212,19 @@
             <h3>Variables</h3>
             <div class = "fragment left-align">
                 <p>Variables hold content</p>
-                <p>Words, numbers, true/false, basically any kind of content</p>
+                <p>Think of boxes and the content of the box</p>
+                <p>Box label is the name of the variable</p>
+                <p>Box content is the value of the variable</p>
+                <p>Words, numbers, true/false</p>
             </div>
             <div class = "fragment">
-                <p>Declare a variable (Give it a name)</p>
+                <p>Declare a variable (Give it a name) --> box label</p>
             <pre><code contenteditable class ="javascript">
                 var bananas;
             </code></pre>
             </div>
             <div class = "fragment">
-                <p>Initialize variable (Give it a value)</p>
+                <p>Initialize variable (Give it a value) --> put something in the box</p>
             <pre><code contenteditable class ="javascript">
                 bananas = 5;
             </code></pre>
@@ -277,7 +280,7 @@
             <div class = "fragment">
                 <p>undefined -- no value yet</p>
             <pre><code contenteditable class ="javascript">
-                var favoriteDinosaur;
+                var favoriteMovie;
             </code></pre>
             </div>
             <div class = "fragment">
@@ -285,9 +288,6 @@
             <pre><code contenteditable class ="javascript">
                 var myTigersName = null;
             </code></pre>
-            </div>
-            <div class = "fragment">
-                In nerd speak, JavaScript variables are "loosely typed." You don't know the kind of value a variable will have until you assign it.
             </div>
         </section>
 
@@ -335,9 +335,9 @@
                     <tr><td>-</td><td>Subtraction</td></tr>
                     <tr><td>*</td><td>Multiplication</td></tr>
                     <tr><td>/</td><td>Division</td></tr>
-                    <tr><td>%</td><td>Modulus</td></tr>
-                    <tr><td>++</td><td>Increment</td></tr>
-                    <tr><td>--</td><td>Decrement</td></tr>
+                    <!--<tr><td>%</td><td>Modulus</td></tr>-->
+                    <!--<tr><td>++</td><td>Increment</td></tr>-->
+                    <!--<tr><td>--</td><td>Decrement</td></tr>-->
                 </table>
             </div>
         </section>
@@ -348,7 +348,7 @@
             <div class = "fragment">
                 <p>Word-y expressions!</p>
             <pre><code contenteditable class ="javascript">
-                var name = "Mitch";
+                var name = "Larry";
                 var dinosaur = "Stegosaurus";
                 var sentence = "My dinosaur is a " + dinosaur + ". Its name is " + name + ".";
             </code></pre>
@@ -391,15 +391,18 @@
         <section>
             <h3>Let's Develop It</h3>
             <p>Daily Budget</p>
-            <p>Ever wonder how much do you have to spend per day?</p>
+            <p>Ever wonder how much you have to spend per day?</p>
             <ul>
-                <li>Store your monthly income in a variable, call it month_income</li>
+                <li>Store your monthly income in a variable, call it income</li>
 
                 <li>Store the number of days in a month, let's call it days</li>
 
-                <li>Calculate how much you have to spend per day</li>
+                <li>Calculate how much you have to spend per day, store it in a variable</li>
 
-                <li>Output the result in an alert(see below) like so: "You have X number of dollars per day to spend"</li>
+                <li>Calculate how much you have to spend per week, store it in a variable/li>
+
+                <li>Output the result in an alert(see below) like so: "You have X number of dollars per day to spend and Y number of dollars to spend per week"</li>
+
             </ul>
 <pre><code contenteditable class ="javascript">
     alert(answer);
@@ -422,7 +425,7 @@
             <div class = "fragment">
 <pre><code contenteditable class ="javascript">
     var budget = 8;
-    if (bananas < 10){
+    if (budget < 10){
     console.log("You should borrow some money")
     }
 </code></pre>
@@ -468,10 +471,10 @@
                 var day_budget = 5;
                 var income = 10;
                 if (income > 5 && day_budget > 3 ){
-                console.log('Eat fruit!');
+                console.log('You are RICH!');
                 }
-                if (bananas < 2 || oranges < 2){
-                console.log('Buy fruit!');
+                if (income < 5 || day_budget < 5){
+                console.log('BORROW BORROW!');
                 }
             </code></pre>
             </div>
@@ -482,11 +485,11 @@
             <h3>If/Else Statement</h3>
             <p>You can use else to perform an alternative action if the "if" fails</p>
           <pre><code contenteditable class ="javascript">
-              var bananas = 5;
-              if (bananas > 3){
-              console.log('Eat a banana!');
-              } else {
+              var budget = 5;
+              if (budget > 3){
               console.log('Buy a banana!');
+              } else {
+              console.log('Who needs Bananas');
               }
           </code></pre>
         </section>
@@ -511,13 +514,14 @@
         <!-- Exercise-->
         <section>
             <h3>Let's Develop It!</h3>
-            <p class = "left-align">Add an if/else statement to our lifetime supply calculator so that if the lifetime supply is greater than 40,000, you say "Wow! That's a lot!" otherwise, say "You seem pretty reasonable!"</p>
+            <p class = "left-align">Add an if/else statement to our daily budget calculator so that if the daily budget is greater than 1,000, Display "Wow! That's a lot!" otherwise (else), display "You better make some phone calls!"</p>
         </section>
 
         <!-- Functions-->
         <section>
             <h3>Functions</h3>
             <p class = "fragment">Functions are re-usable collections of statements</p>
+            <p class="fragment">Think of them as recipes. A recipe is a reusable list of instructions</p>
             <div class = "fragment">
                 Declare a function
          <pre><code contenteditable class ="javascript">
@@ -525,9 +529,10 @@
              console.log('Hi!');
              }
          </code></pre>
+                <p class="fragment">sayHi is the label and the content is the list of instructions that we want to store and re-run</p>
             </div>
             <div class = "fragment">
-                Call the function
+                Call the function: run the instructions
          <pre><code contenteditable class ="javascript">
              sayHi();
          </code></pre>
@@ -537,17 +542,27 @@
         <!-- Functions cont.-->
         <section>
             <h3>Arguments</h3>
-            <p class = "fragment">Functions can take named arguments</p>
+            <p class = "fragment">Functions can take arguments</p>
+            <p class="fragment">Arguments are variables we pass to the function</p>
+            <p class="fragment">The function takes these variables and perform some instructions using those variables</p>
             <div class = "fragment">
          <pre><code contenteditable class ="javascript">
+
+//the function sayHi has one argument (variable) called name we pass to it from outside the function
              function sayHi(name){
              console.log('Hi' + name + '!');
              }
-             sayHi('Mitch, the dinosaur');
-             sayHi('Harold, the hippo');
 
-             var name = 'Pip, the mouse';
+             //Mitch is the name of the variable we pass
+             //the function takes variable "name" and displays: Hi Pip!
+             var name = 'Pip';
              sayHi(name);
+
+             //we can pass a String to the function directly
+             sayHi('Mitch');
+
+
+
          </code></pre>
             </div>
         </section>
@@ -583,23 +598,6 @@
              return result; //Anything after this line won't be read
              }
              var sum  = addNumbers(5, 6);
-         </code></pre>
-            </div>
-        </section>
-
-        <!-- Functions cont.-->
-        <section>
-            <h3>Variable Scope</h3>
-            <p class = "fragment">JavaScript variables have "function scope." They are visible in the function where they are defined</p>
-            <div class = "fragment">
-                A variable with "local" scope:
-         <pre><code contenteditable class ="javascript">
-             function addNumbers(num1, num2){
-             var result = num1 + num2;
-             return result; //Anything after this line won't be read
-             }
-             var sum  = addNumbers(5, 6);
-             console.log(result); //will return undefined because result only exists inside the addNumbers function
          </code></pre>
             </div>
         </section>
