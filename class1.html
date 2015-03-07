@@ -70,7 +70,7 @@
 
 
 
-                <p class = "blue">15 mins Simple group activity walk around introducing yourself to others and talk and chit chat a little bit</p>
+                <!--<p class = "blue">15 mins Simple group activity walk around introducing yourself to others and talk and chit chat a little bit</p>-->
 
             </div>
         </section>
@@ -125,31 +125,33 @@
         <section>
             <h3>HTML and CSS</h3>
 
-            <p>We saw before how we used html and css to display things on the browser</p>
-            <p> the browser essentially reads the html and css and figure out how to display them</p>
+            <div class="left-align">
 
-            example:
-            <pre><code contenteditable class ="css">
+                <ul>
+            <li class="fragment">We used html and css to design web pages</li>
+            <li class="fragment"> The browser essentially reads the html and css and figure out how to display them</li>
+                </ul>
+
+
+            <pre class="fragment"><code contenteditable class ="css">
                 p{
                 font-size:80px
                 }
 
             </code></pre>
 
-            <pre>
+            <pre class="fragment">
                 <code class="html">
                     &lt;p&gt; Hello World  &lt;/p&gt;
                 </code>
             </pre>
-
-            This falls short in many cases. Sometimes we want to do more things that extends beyond HTML and CSS
-
+            <p class="fragment">This falls short in many cases. Sometimes we want to do more things that extends beyond the capabilities of HTML and CSS</p>
+            </div>
         </section>
         <section>
             <h3>JavaScript to the rescue!</h3>
             <div class="left-align">
-            <p>That's when we use JavaScript</p>
-            <p>The cases might be:</p>
+            <p>Cases that HTML and CSS fall short:</p>
             </div>
             <ul>
                 <li>Clicking on a button that hides and show a menu</li>
@@ -166,7 +168,7 @@
             <!--<p>How your computer accesses websites</p>-->
             <!--<img src = "images/client-server.png"/>-->
             <!--<p class = "fragment">JavaScript is "client side"</p>-->
-            <!--<p class = "fragment">Your browser understands it!</p>-->
+            <!--<p class = "fragment">Your` browser understands it!</p>-->
         <!--</section>-->
 
 
@@ -197,14 +199,16 @@
         <!--Statements -->
         <section>
             <h3>Statements/Script</h3>
-            <div>Each line in JavaScript is an instruction or a script</div>
-            <div>When the browser reads it, it "executes the script"</div>
-            <div>Try it out on your Chrome or Firefox console</a></div>
-          <pre><code contenteditable class ="javascript">
+            <ul>
+
+                <li class = "fragment">Your` browser understands javascript!</li>
+                <li class="fragment">When the browser reads it, it "executes the script"</li>
+                <li class="fragment">Try it out on your Chrome or Firefox console</a></li>
+            </ul>
+          <pre class="fragment"><code contenteditable class ="javascript">
               alert("hi")
           </code></pre>
         </section>
-
 
 
         <!-- Variables-->
@@ -212,10 +216,10 @@
             <h3>Variables</h3>
             <div class = "fragment left-align">
                 <p>Variables hold content</p>
-                <p>Think of boxes and the content of the box</p>
-                <p>Box label is the name of the variable</p>
-                <p>Box content is the value of the variable</p>
-                <p>Words, numbers, true/false</p>
+                <li class="fragment">Think of boxes and the content of the box</li>
+                <li class="fragment">Box label is the name of the variable</li>
+                <li class="fragment">Box content is the value of the variable</li>
+                <li class="fragment">Three main types: Words, numbers, true/false</li>
             </div>
             <div class = "fragment">
                 <p>Declare a variable (Give it a name) --> box label</p>
@@ -390,7 +394,9 @@
 
         <section>
             <h3>Let's Develop It</h3>
-            <p>Daily Budget</p>
+
+            <p>Daily Budget Calculator</p>
+
             <p>Ever wonder how much you have to spend per day?</p>
             <ul>
                 <li>Store your monthly income in a variable, call it income</li>
@@ -399,7 +405,7 @@
 
                 <li>Calculate how much you have to spend per day, store it in a variable</li>
 
-                <li>Calculate how much you have to spend per week, store it in a variable/li>
+                <li>Calculate how much you have to spend per week, store it in a variable</li>
 
                 <li>Output the result in an alert(see below) like so: "You have X number of dollars per day to spend and Y number of dollars to spend per week"</li>
 
@@ -520,17 +526,20 @@
         <!-- Functions-->
         <section>
             <h3>Functions</h3>
-            <p class = "fragment">Functions are re-usable collections of statements</p>
-            <p class="fragment">Think of them as recipes. A recipe is a reusable list of instructions</p>
+            <ul>
+            <li class = "fragment">A Functions is a re-usable collection of statements</li>
+            <li class="fragment">Think of them as recipes. A recipe is a reusable list of instructions</li>
+            </ul>
             <div class = "fragment">
                 Declare a function
          <pre><code contenteditable class ="javascript">
+ //sayHi is the label and the content is the list of instructions that we want to store and re-run
              function sayHi(){
              console.log('Hi!');
              }
          </code></pre>
-                <p class="fragment">sayHi is the label and the content is the list of instructions that we want to store and re-run</p>
             </div>
+
             <div class = "fragment">
                 Call the function: run the instructions
          <pre><code contenteditable class ="javascript">
@@ -552,17 +561,11 @@
              function sayHi(name){
              console.log('Hi' + name + '!');
              }
-
-             //Mitch is the name of the variable we pass
              //the function takes variable "name" and displays: Hi Pip!
              var name = 'Pip';
              sayHi(name);
-
              //we can pass a String to the function directly
              sayHi('Mitch');
-
-
-
          </code></pre>
             </div>
         </section>
@@ -624,11 +627,11 @@
         <section>
             <h3>Let's Develop It</h3>
             <div>
-                <p>Wrap the lifetime supply calculator in a function called calculate()</p>
+                <p>Wrap the daily budget calculator in a function called calculate()</p>
                 <p>Add a link to the html that calls the function when it is clicked</p>
         <pre><code contenteditable class ="html">
             &lt;a href = "#" onclick="calculate()">
-            Calculate life time supply
+            Calculate Daily Budget
             &lt;/a>
         </code></pre>
             </div>
