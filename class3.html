@@ -78,6 +78,7 @@
             <li class = "fragment">HTML element selection &amp; manipulation</li>
             <li class = "fragment">CSS manipulation</li>
             <li class = "fragment">HTML events</li>
+              <li class = "fragment">Fetching data from other websites (API)</li>
             <li class = "fragment">JavaScript effects and animations</li>
           </ul>
         </section>
@@ -92,17 +93,17 @@
           </ul>
         </section>
         
-        <section>
-          <h3>jQuery: A Brief History</h3>
-          <ul>
-            <li class = "fragment">jQuery was created by John Resig, a JavaScript tool developer at Mozilla.</li>
-            <li class = "fragment">January 2006: John announced jQuery at BarCampNYC: BarCampNYC Wrap-up</li>
-            <li class = "fragment">September 2007: A new user interface library is added to jQuery: jQuery UI: Interactions and Widgets</li>
-            <li class = "fragment">September 2008: Microsoft and Nokia announce their support for jQuery</li>
-            <li class = "fragment">December 2009: jQuery wins .Net Magazine's Award for Best Open Source Application</li>
-          </ul>
-        </section>
-        
+        <!--<section>-->
+          <!--<h3>jQuery: A Brief History</h3>-->
+          <!--<ul>-->
+            <!--<li class = "fragment">jQuery was created by John Resig, a JavaScript tool developer at Mozilla.</li>-->
+            <!--<li class = "fragment">January 2006: John announced jQuery at BarCampNYC: BarCampNYC Wrap-up</li>-->
+            <!--<li class = "fragment">September 2007: A new user interface library is added to jQuery: jQuery UI: Interactions and Widgets</li>-->
+            <!--<li class = "fragment">September 2008: Microsoft and Nokia announce their support for jQuery</li>-->
+            <!--<li class = "fragment">December 2009: jQuery wins .Net Magazine's Award for Best Open Source Application</li>-->
+          <!--</ul>-->
+        <!--</section>-->
+        <!---->
         <!-- Including jquery-->
         <section>
           <h3>Including jQuery</h3>
@@ -374,17 +375,22 @@ var images = $(".picture"); //All images with class picture
           <div class = "fragment">
             <pre><code contenteditable class = "html">
 &lt;form id ="about-me">
+
   &lt;input type = "text" id = "name" placeholder = "Enter a name"/>
+
   &lt;label>Do you like popcorn&lt;/label>
   Yes &lt;input type = "radio" name = "popcorn" val = "yes"/>
   No &lt;input type = "radio" name = "popcorn" val = "no"/>
-  &lt;label>Favorite Dinosaur&lt;/label>
-  &lt;select id = "dinosaur">
-    &lt;option value = "t-rex">Tyrannosaurus Rex&lt;/option>
-    &lt;option value = "tri">Triceratops&lt;/option>
-    &lt;option value = "stego">Stegosaurus&lt;/option>
+
+  &lt;label>Favorite Movie&lt;/label>
+  &lt;select id = "movie">
+    &lt;option value = "w-oz">The Wizard of Oz&lt;/option>
+    &lt;option value = "frozen">Frozen&lt;/option>
+    &lt;option value = "whiplash">Whiplash&lt;/option>
     &lt;option value = "other">Other&lt;/option>
   &lt;/select>
+
+
   &lt;input type = "submit" value = "Go!" style = "padding: 7px; font-size:1em"/>
 &lt;/form>
             </code></pre>
@@ -397,16 +403,22 @@ var images = $(".picture"); //All images with class picture
           <div class = "fragment left-align">
 <form>
   <input type = "text" id = "name" placeholder = "Enter a name" style = "width:300px; padding: 7px; font-size:1em"/><br/>
+    <br/>
+    <br/>
   <label>Do you like popcorn</label><br/>
   Yes <input type = "radio" name = "popcorn" val = "yes" style ="font-size:1em"/>
-  No <input type = "radio" name = "popcorn" val = "no" style ="font-size:1em"/><br/>
-  <label>Favorite Dinosaur</label><br/>
-  <select id = "dinosaur" style = "padding: 7px; font-size:1em">
-    <option>Tyrannosaurus Rex</option>
-    <option>Triceratops</option>
-    <option>Stegosaurus</option>
+  No <input type = "radio" name = "popcorn" val = "no" style ="font-size:1em"/>
+    <br/>
+    <br/>
+  <label>Favorite Movie</label><br/>
+  <select id = "movie" style = "padding: 7px; font-size:1em">
+    <option>The Wizard of Oz</option>
+    <option>Frozen</option>
+    <option>Whiplash</option>
     <option>Other</option>
-  </select><br/>
+  </select>
+    <br/>
+    <br/>
   <input type = "submit" value = "Go!" style = "padding: 7px; font-size:1em"/>
 </form>
           </div>
@@ -415,11 +427,11 @@ var images = $(".picture"); //All images with class picture
         <!-- JavaScript and HTML Forms-->
         <section>
           <h3>Values from Forms</h3>
-          <p>You can use JavaScript to get values from a form</p>
+          <p>You can use JQuery to get values from a form</p>
           <div class = "fragment">
             <pre><code contenteditable class = "javascript">
     $('#name').val();
-    $('select#dinosaur').val();
+    $('select#movie').val();
     $('input:radio[name=popcorn]:checked').val();
             </code></pre>
           </div>
@@ -452,7 +464,7 @@ var images = $(".picture"); //All images with class picture
           <h3>Let's Develop It</h3>
           <ul>
             <li>Choose one (or all!) of your functions made so far</li>
-            <li>i.e. lifetime supply, favorite things, or my friends</li>
+            <li>i.e. budget calculator, favorite things, or my friends</li>
             <li>Create a form to send dynamic data to the function when you click the button</li>
             <li>Don't forget to add parameters to your existing functions!</p>
             <li>This is a little harder than all the other exercises.</li>
