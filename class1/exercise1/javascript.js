@@ -1,7 +1,8 @@
-var age = 26;
-var oldAge = 96;
-var perDay = 2;
+var income = 100;
+var days = 30;
 
-var days = (oldAge - age) * 365;
-var total = perDay * days;
-alert("You will need " + total + " to last you until the ripe old age of " + oldAge);
+var per_day = income/days;
+
+var per_week= income / 7;
+
+alert("You have $" + per_day + " to spend per day and $"+per_week+" spend per week" );

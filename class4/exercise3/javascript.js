@@ -14,10 +14,9 @@ $(document).ready(function(){
         }
     });
     $('#calculate').submit(function(event){
-        var givenAge = $('#age').val();
-        var givenSnack = $('#snack').val();
-        var givenPerDay = $('#times-per-day').val();
-        $('#lifetime-supply').html(calculate(givenAge, givenSnack, givenPerDay));
+        var days = $('#days').val();
+        var income = $('#income').val();
+        $('#daily-budget').html(calculate(days,income));
         return false;
     });
     $('#favorites').submit(function(event){
@@ -34,7 +33,6 @@ $(document).ready(function(){
     });
     
     $('#meetup').submit(function(event){
-        
         getMeetups($('#topic').val(), $('#zipcode').val())
         return false;
     });
@@ -75,16 +73,17 @@ function parseMeetups(results){
    } 
 }
 
-function calculate(age, snack, perDay){
-    var oldAge = 96;
+function calculate(days,income){
 
-    var days = (oldAge - age) * 356;
-    var total = perDay * days;
-    if(total > 40000){
-        return "You will need " + total + " of " + snack + " to last you until the ripe old age of " + oldAge + ". Wow! That's a lot!";
+    var per_day = income/days;
+
+    var per_week= per_day * 7;
+
+    if(per_day > 5){
+        return "You have $" + per_day + " to spend per day and $"+per_week+" spend per week. You are Rich!" ;
     }else{
-        return "You will need " + + total + " of " + snack +  " to last you until the ripe old age of " + oldAge + ". You seem pretty reasonable";
-    } 
+        return "You have $" + per_day + " to spend per day and $"+per_week+" spend per week , Make some phone calls!";
+    }
 }
 
 function favoriteThings(thing){

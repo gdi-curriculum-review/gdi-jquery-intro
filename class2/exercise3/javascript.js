@@ -1,19 +1,22 @@
 function calculate(){
-    var age = 26;
-    var oldAge = 96;
-    var perDay = 2;
+    var income = 100;
+    var days = 30;
 
-    var days = (oldAge - age) * 356;
-    var total = perDay * days;
-    var resultDiv = document.getElementById('lifetime-supply')
-    if(total > 40000){
-        resultDiv.innerHTML = "You will need " + total + " to last you until the ripe old age of " + oldAge + ". Wow! That's a lot!";
+    var per_day = income/days;
+
+    var per_week= per_day * 7;
+
+    var resultDiv = document.getElementById('daily_budget')
+
+    if(per_day > 40000){
+        resultDiv.innerHTML = "You have $" + per_day + " to spend per day and $"+per_week+" spend per week. You are Rich!";
     }else{
-        resultDiv.innerHTML = "You will need " + total + " to last you until the ripe old age of " + oldAge + ". You seem pretty reasonable";
+        resultDiv.innerHTML = "You have $" + per_day + " to spend per day and $"+per_week+" spend per week , Make some phone calls!";
     } 
 }
 
 function favoriteThings(){
+
     var favoriteThings = ['Rabbits', 'Orange', 'Yogurt', 'Brussel Sprouts', 'Otters'];
     var resultDiv = document.getElementById('favorite-things');
     
@@ -21,14 +24,10 @@ function favoriteThings(){
     var result = 'My favorite things are: ';
     
     for (var i = 0; i<favoriteThings.length; i++){
-        if (i < favoriteThings.length - 1){
-            result += favoriteThings[i] + ', ';
-        }else{
-            result += "and " + favoriteThings[i] + '.';
-        }
+
+            result += favoriteThings[i];
     }
-    var resultText = document.createTextNode(result);
-    resultParagraph.appendChild(resultText);
+    resultParagraph.innerHTML = result;
     resultDiv.appendChild(resultParagraph);
 }
 function myFriends(){
@@ -49,7 +48,7 @@ function myFriends(){
     
     for(var i = 0; i < friends.length; i++){
         var resultParagraph = document.createElement('p');
-        var resultText = document.createTextNode(describeFriend(friends[i]));
+        var resultText += document.createTextNode(describeFriend(friends[i]));
         resultParagraph.appendChild(resultText);
         resultDiv.appendChild(resultParagraph);
     }
