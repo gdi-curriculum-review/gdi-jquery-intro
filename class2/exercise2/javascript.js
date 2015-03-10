@@ -8,10 +8,12 @@ function calculate(){
 
     var per_week= per_day * 7;
 
+    var result = document.getElementById('daily_budget');
+
     if(per_day > 5){
-        alert("You have $" + per_day + " to spend per day and $"+per_week+" spend per week. You are Rich!" );
+        result.html("You have $" + per_day + " to spend per day and $"+per_week+" spend per week. You are Rich!")
     }else{
-        alert("You have $" + per_day + " to spend per day and $"+per_week+" spend per week , Make some phone calls!" );
+        result.innerHTML = "You have $" + per_day + " to spend per day and $"+per_week+" spend per week. You are Rich!"
     }
 }
 

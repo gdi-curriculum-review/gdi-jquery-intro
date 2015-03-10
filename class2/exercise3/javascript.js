@@ -27,8 +27,7 @@ function favoriteThings(){
 
             result += favoriteThings[i];
     }
-    var resultText = document.createTextNode(result);
-    resultParagraph.appendChild(resultText);
+    resultParagraph.innerHTML = result;
     resultDiv.appendChild(resultParagraph);
 }
 function myFriends(){
@@ -49,7 +48,7 @@ function myFriends(){
     
     for(var i = 0; i < friends.length; i++){
         var resultParagraph = document.createElement('p');
-        var resultText = document.createTextNode(describeFriend(friends[i]));
+        var resultText += document.createTextNode(describeFriend(friends[i]));
         resultParagraph.appendChild(resultText);
         resultDiv.appendChild(resultParagraph);
     }

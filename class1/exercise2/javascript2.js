@@ -18,3 +18,8 @@ var result = multiplyNumbers(3,4,5,10);
 
 alert(a);
 alert(result);
+
+function calculate(){
+
+
+}

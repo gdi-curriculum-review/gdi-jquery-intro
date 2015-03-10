@@ -13,15 +13,30 @@ $(document).ready(function(){
           $(this).html('Bye!')
         }
     });
+
+    //bonus
     $('#calculate').click(calculate);
     $('#favorites').click(favoriteThings);
     $('#friends').click(myFriends);
+
+    $("#myForm").submit(function(){
+
+        var days = $("#days").val()
+        var income = $("#income").val()
+
+        var result = calculate(income,days);
+
+        // alert(result)
+        $("#daily_budget").html(result);
+        
+        return false;
+    })
 })
 
-function calculate(){
-    var income = 100;
+function calculate(income,days){
+    // var income = 100;
 
-    var days = 30;
+    // var days = 30;
 
     var per_day = income/days;
 
@@ -31,8 +46,10 @@ function calculate(){
 
     if(per_day > 5){
         resultDiv.html("You have $" + per_day + " to spend per day and $"+per_week+" spend per week. You are Rich!" );
+        return per_day;
     }else{
         resultDiv.html("You have $" + per_day + " to spend per day and $"+per_week+" spend per week , Make some phone calls!" );
+        return per_day;
     }
 }
 
